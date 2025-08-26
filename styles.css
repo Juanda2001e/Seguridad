@@ -1,0 +1,225 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* --- Menú de Navegación --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #007BFF;
+}
+
+.nav-button {
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #0056b3;
+}
+
+/* --- Slider de Imágenes --- */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 500px;
+    overflow: hidden;
+    margin-bottom: 2rem;
+}
+
+.slider-item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slider-item.active {
+    opacity: 1;
+}
+
+.slider-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 1.5rem 2.5rem;
+    border-radius: 10px;
+}
+
+.slider-caption h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem;
+}
+
+.slider-caption p {
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+/* Estilos para los botones del slider */
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+    transition: background-color 0.3s ease;
+}
+
+.slider-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+
+/* --- Secciones de Tarjetas --- */
+.cards-section {
+    text-align: center;
+}
+
+.cards-section h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #007BFF;
+}
+
+.cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    flex: 1 1 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-icon {
+    font-size: 3rem;
+    color: #007BFF;
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.card p {
+    color: #777;
+}
+
+/* --- Pie de Página --- */
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0;
+    margin-top: 3rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .slider-caption h2 {
+        font-size: 1.5rem;
+    }
+
+    .slider-caption p {
+        font-size: 1rem;
+    }
+}
